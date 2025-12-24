@@ -63,4 +63,7 @@ npm run dev
 ## What I Would Improve If I Had More Time
 1.Sorting: Implement the sorting functionality<br>
 2.Mobile Responsiveness: Improve the UI for mobile/tablet devices <br>
-3.Pagination: If the equipment list is very large, we ahve to add pagination
+3.Pagination: If the equipment list is very large, we have to add pagination
+
+# Important point-
+-make sure both servers (backend and frontend) are running simultaneously
