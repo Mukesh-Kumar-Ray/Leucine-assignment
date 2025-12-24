@@ -20,7 +20,7 @@ git clone https://github.com/Mukesh-Kumar-Ray/Leucine-assignment.git
 <hr>
 
 ## FRONTEND SETUP - 
-#Open a new terminal in VS Code and follow the steps below:
+# Open a new terminal in VS Code and follow the steps below:
 
 1.Navigate to the frontend folder:
 ```bash
@@ -34,13 +34,13 @@ npm install
 ```bash
 npm run dev
 ```
-4. Open in Browser
+4.Open in Browser
    Navigate to http://localhost:5173/ in your web browser.
 
 <hr>
 
 ## BACKEND SETUP-
-Open another new terminal and follow these steps:
+# Open another new terminal and follow these steps:
 
 1.Navigate to the backend folder:
 ```bash
