@@ -15,7 +15,7 @@ A simple web application to manage equipment inventory with CRUD (Create, Read, 
 ## 📥 Clone the Repository
 
 ```bash
-git clone https://github.com/Mukesh-Kumar-Ray/BM_infotech_frontend.git
+git clone https://github.com/Mukesh-Kumar-Ray/Leucine-assignment.git
 ```
 <hr>
 
