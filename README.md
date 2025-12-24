@@ -39,7 +39,7 @@ npm run dev
 
 <hr>
 
-##BACKEND SETUP-
+## BACKEND SETUP-
 Open another new terminal and follow these steps:
 
 1.Navigate to the backend folder:
@@ -60,6 +60,6 @@ npm run dev
 ```
 
 ## What I Would Improve If I Had More Time
-1.Sorting: Implement the sorting functionality
-2.Mobile Responsiveness: Improve the UI for mobile/tablet devices
+1.Sorting: Implement the sorting functionality<br>
+2.Mobile Responsiveness: Improve the UI for mobile/tablet devices <br>
 3.Pagination: If the equipment list is very large, we ahve to add pagination
