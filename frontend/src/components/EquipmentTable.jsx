@@ -1,6 +1,9 @@
 import { Edit2, Trash2, AlertCircle, CheckCircle, Wrench, Loader2 ,Search  } from "lucide-react";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import axios from "axios";
 
-const EquipmentTable = ({ data, loading, onEdit, onDelete ,searchTerm }) => {
+const EquipmentTable = ({ data, loading, onEdit, refresh ,setRefresh ,searchTerm }) => {
   const getStatusIcon = (status) => {
     switch (status) {
       case "Active":
@@ -22,6 +25,21 @@ const EquipmentTable = ({ data, loading, onEdit, onDelete ,searchTerm }) => {
         return "bg-red-100 text-red-800";
     }
   };
+
+  const handleDelete = async (id) => {
+      try {
+        await axios.delete(`http://localhost:5000/api/equipment/${id}`);
+        toast.success("Equipment deleted successfully!", {
+          position: "top-right",
+        });
+      } catch (error) {
+        toast.error("Failed to delete equipment", {
+          position: "top-right",
+        });
+      }
+      setRefresh(!refresh)
+  };
+
 
   if (loading) {
     return (
@@ -105,7 +123,7 @@ if (data.length === 0) {
                     Edit
                   </button>
                   <button
-                    onClick={() => onDelete(item._id)}
+                    onClick={() => handleDelete(item._id)}
                     className="flex items-center gap-1 px-3 py-2 bg-red-50 text-red-700 hover:bg-red-100 rounded-md transition"
                   >
                     <Trash2 size={16} />

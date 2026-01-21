@@ -31,7 +31,7 @@ const EquipmentForm = ({ formData, setFormData, onSubmit, errors, editId }) => {
           className={`w-full px-4 py-3 rounded-lg border ${
             errors.name ? "border-red-500" : "border-gray-300"
           } focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition`}
-          required
+          //required
         />
         {errors.name && (
           <p className="mt-1 text-sm text-red-600">{errors.name}</p>
@@ -50,7 +50,7 @@ const EquipmentForm = ({ formData, setFormData, onSubmit, errors, editId }) => {
           className={`w-full px-4 py-3 rounded-lg border ${
             errors.type ? "border-red-500" : "border-gray-300"
           } focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition`}
-          required
+          //required
         >
           <option value="">Select Type</option>
           <option value="Machine">Machine</option>
@@ -106,7 +106,7 @@ const EquipmentForm = ({ formData, setFormData, onSubmit, errors, editId }) => {
             className={`w-full pl-12 pr-4 py-3 rounded-lg border ${
               errors.lastCleanedDate ? "border-red-500" : "border-gray-300"
             } focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition`}
-            required
+            //required
           />
         </div>
         {errors.lastCleanedDate && (

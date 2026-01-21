@@ -2,8 +2,20 @@ import Equipment from "../models/equipment.model.js";
 
 export const getEquipment = async (req, res) => {
     try {
-         const getEquipmentData = await Equipment.find();
-         res.status(200).json(getEquipmentData);
+        const search = req.query.search || '';
+        const page= parseInt(req.query.page) || 1;
+        const skip = (page-1)*5;
+        const query = {
+            $or:[
+                {name:{$regex:search,$options:'i'}},
+                {type:{$regex:search,$options:'i'}},
+                {status:{$regex:search,$options:'i'}}
+            ]
+        }
+
+        const total = await Equipment.countDocuments(query);
+         const getEquipmentData = await Equipment.find(query).skip(skip).limit(5);
+         res.status(200).json({getEquipmentData,page,skip,total,totalpage:Math.ceil(total/5)});
     } catch (error) {
         console.error(error.message)
     }
